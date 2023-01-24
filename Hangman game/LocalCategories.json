@@ -1,0 +1,162 @@
+[
+    {
+        "categoryName": "Animals",
+        "categoryImage": "animal",
+        "words": [
+            "cow",
+            "horse",
+            "dog",
+            "cat",
+            "mouse",
+            "snake",
+            "spider",
+            "shark",
+            "squirrel",
+            "whale"
+        ]
+    },
+    {
+        "categoryName": "Singers",
+        "categoryImage": "singer",
+        "words": [
+            "Miley Cyrus",
+            "Dolly Parton",
+            "Elvis Presley",
+            "Eminem",
+            "Ed Sheeran",
+            "Beyonce",
+            "Rihanna",
+            "Pink",
+            "Chet Faker",
+            "Shakira"
+        ]
+    },
+    {
+        "categoryName": "Actors",
+        "categoryImage": "actor",
+        "words": [
+            "Johnny Deep,",
+            "Brad Pitt",
+            "Angelina Jolie",
+            "Orlando Bloom",
+            "Leonadro DiCaprio",
+            "Jenna Ortega",
+            "Jenifer Lawrence",
+            "Matt Damon",
+            "Bruce Willis",
+            "Jean Reno"
+        ]
+    },
+    {
+        "categoryName": "Superheroes",
+        "categoryImage": "Superhero",
+        "words": [
+             "Batman",
+             "Superman",
+             "Catwoman",
+             "Iron Man",
+             "Spiderman",
+             "Hulk",
+             "Captain america",
+             "Wonder Woman",
+             "Flash",
+             "Thor"
+        ]
+    },
+    {
+        "categoryName": "Movie & Series",
+        "categoryImage": "movies",
+        "words": [
+             "Lord of the Rings",
+             "Harry Potter",
+             "Big Bang Theory",
+             "Friends",
+             "Donnie Darko",
+             "Gladiator",
+             "Leon",
+             "American Beauty",
+             "Fight Club",
+             "Edward Scissorhands"
+        ]
+    },
+    {
+        "categoryName": "Geography",
+        "categoryImage": "geography",
+        "words": [
+             "New Zealand",
+             "Australia",
+             "Austria",
+             "Japan",
+             "Poland",
+             "Norway",
+             "Spain",
+             "Cuba",
+             "Haiti",
+             "Madagascar"
+        ]
+    },
+    {
+        "categoryName": "Animated Characters",
+        "categoryImage": "animation",
+        "words": [
+             "Mickey Mouce",
+             "Snow White",
+             "Elsa",
+             "Cruella",
+             "Peter Pan",
+             "Pocahontas",
+             "Ariel",
+             "Hercules",
+             "bugs bunny",
+             "Donald Duck"
+        ]
+    },
+    {
+        "categoryName": "Food",
+        "categoryImage": "food",
+        "words": [
+             "Pizza",
+             "Curry",
+             "Kebab",
+             "Salad",
+             "Mac and Cheese",
+             "Spagetti",
+             "Sushi",
+             "Guacamole",
+             "carbonara",
+             "Burger"
+        ]
+    },
+    {
+        "categoryName": "Professions",
+        "categoryImage": "professions",
+        "words": [
+             "doctor",
+             "programmer",
+             "bricklayer",
+             "painter",
+             "farmer",
+             "actor",
+             "singer",
+             "dancer",
+             "salesman",
+             "plumber"
+        ]
+    },
+    {
+        "categoryName": "Sports",
+        "categoryImage": "sports",
+        "words": [
+             "rugby",
+             "football",
+             "basketball",
+             "voleyball",
+             "squash",
+             "tennis",
+             "ping-pong",
+             "weightlifting",
+             "rollerblading",
+             "running"
+        ]
+    }
+]
