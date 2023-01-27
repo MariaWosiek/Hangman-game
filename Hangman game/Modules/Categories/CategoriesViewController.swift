@@ -68,16 +68,4 @@ class CategoriesViewController: UIViewController, Storyboarded, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         30
     }
-    
-    private func setGradientBackground() {
-        let colorTop = UIColor(red: 102.0/255.0, green: 0.0/255.0, blue: 102.0/255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 153.0/255.0, alpha: 1.0).cgColor
-
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.view.bounds
-
-        self.view.layer.insertSublayer(gradientLayer, at:0)
-    }
 }

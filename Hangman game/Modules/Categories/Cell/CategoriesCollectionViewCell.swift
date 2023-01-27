@@ -18,10 +18,12 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     }
 
     private func decorateCell() {
-        contentView.backgroundColor = UIColor(red: 133.0/255.0, green: 133.0/255.0, blue: 173.0/255.0, alpha: 1.0)
+        contentView.backgroundColor = Constants.Colors.secondaryColor
         contentView.layer.cornerRadius = 12
+        
+        contentView.clipsToBounds = false
         contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOpacity = 0.1
+        contentView.layer.shadowOpacity = 0.2
         contentView.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
     

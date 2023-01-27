@@ -23,6 +23,9 @@
 		F9C0AABE297DA93900475FA6 /* LocalCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = F9C0AABD297DA93900475FA6 /* LocalCategories.json */; };
 		F9C0AAC0297DB05C00475FA6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AABF297DB05C00475FA6 /* Category.swift */; };
 		F9C0AAC3297DB1DC00475FA6 /* CategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AAC2297DB1DC00475FA6 /* CategoriesDataSource.swift */; };
+		F9EF43A12983F05100AB21F2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EF43A02983F05100AB21F2 /* Array+Extensions.swift */; };
+		F9EF43A32983F06C00AB21F2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EF43A22983F06C00AB21F2 /* UIViewController+Extensions.swift */; };
+		F9EF43A52983F18600AB21F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EF43A42983F18600AB21F2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		F9C0AABD297DA93900475FA6 /* LocalCategories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocalCategories.json; sourceTree = "<group>"; };
 		F9C0AABF297DB05C00475FA6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F9C0AAC2297DB1DC00475FA6 /* CategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSource.swift; sourceTree = "<group>"; };
+		F9EF43A02983F05100AB21F2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		F9EF43A22983F06C00AB21F2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F9EF43A42983F18600AB21F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +84,11 @@
 			children = (
 				F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */,
 				F9C0AA8B297AAEDF00475FA6 /* SceneDelegate.swift */,
+				F9EF43A42983F18600AB21F2 /* Constants.swift */,
 				F9C0AAB0297DA2EB00475FA6 /* Common */,
 				F9C0AAB2297DA4A300475FA6 /* Modules */,
 				F9C0AA9D297AC64C00475FA6 /* Models */,
+				F9EF439C2983F02A00AB21F2 /* Extensions */,
 				F9C0AAB5297DA54D00475FA6 /* Supporting Files */,
 			);
 			path = "Hangman game";
@@ -161,6 +169,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		F9EF439C2983F02A00AB21F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9EF43A02983F05100AB21F2 /* Array+Extensions.swift */,
+				F9EF43A22983F06C00AB21F2 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,12 +255,15 @@
 				F9C0AAA9297AC97D00475FA6 /* MainCoordinator.swift in Sources */,
 				F9C0AA8E297AAEDF00475FA6 /* CategoriesViewController.swift in Sources */,
 				F9C0AAA7297AC85100475FA6 /* Storyboarded.swift in Sources */,
+				F9EF43A52983F18600AB21F2 /* Constants.swift in Sources */,
 				F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */,
 				F9C0AAB7297DA56D00475FA6 /* CategoriesViewModel.swift in Sources */,
 				F9C0AABC297DA66900475FA6 /* CategoriesCollectionViewCell.swift in Sources */,
 				F9C0AAB9297DA63000475FA6 /* GameViewModel.swift in Sources */,
 				F9C0AA8C297AAEDF00475FA6 /* SceneDelegate.swift in Sources */,
+				F9EF43A32983F06C00AB21F2 /* UIViewController+Extensions.swift in Sources */,
 				F9C0AAC3297DB1DC00475FA6 /* CategoriesDataSource.swift in Sources */,
+				F9EF43A12983F05100AB21F2 /* Array+Extensions.swift in Sources */,
 				F9C0AAC0297DB05C00475FA6 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

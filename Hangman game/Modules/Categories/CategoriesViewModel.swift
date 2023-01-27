@@ -8,13 +8,12 @@
 import Foundation
 
 protocol CategoriesViewModelDelegate: AnyObject {
-    func startGame(withWord word: String)
+    func startGame(withCategory category: Category)
 }
 
 class CategoriesViewModel {
     
     weak var delegate: CategoriesViewModelDelegate?
-    
     private(set) var categories:[Category] = []
     
     private let categoriesDataSource: CategoriesDataSourceProtocol
@@ -29,7 +28,6 @@ class CategoriesViewModel {
     }
     
     func categoryTapped(choosenCategory: Category) {
-        guard let word = choosenCategory.words.randomElement() else { return }
-        delegate?.startGame(withWord: word)
+        delegate?.startGame(withCategory: choosenCategory)
     }
 }
