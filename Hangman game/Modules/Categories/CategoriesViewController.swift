@@ -8,7 +8,7 @@
 import UIKit
 
 class CategoriesViewController: UIViewController, Storyboarded, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+        
     var viewModel: CategoriesViewModel!
     
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -25,6 +25,7 @@ class CategoriesViewController: UIViewController, Storyboarded, UICollectionView
         flowLayout?.estimatedItemSize = .zero
         collectionView.dataSource = self
         collectionView.delegate = self
+        viewModel.controllerDelegate = self
         collectionView.backgroundColor = .clear
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -67,5 +68,12 @@ class CategoriesViewController: UIViewController, Storyboarded, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         30
+    }
+}
+
+// MARK: - CategoriesViewModelControllerDelegate
+extension CategoriesViewController: CategoriesViewModelControllerDelegate {
+    func reloadData() {
+        collectionView.reloadData()
     }
 }

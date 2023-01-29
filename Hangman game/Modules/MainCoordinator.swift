@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainCoordinator: Coordinator, CategoriesViewModelDelegate, GameViewModelCoordinatorDelegate {
+class MainCoordinator: Coordinator, CategoriesViewModelCoordinatorDelegate, GameViewModelCoordinatorDelegate {
     
     private(set) var childCoordinatores = [Coordinator]()
     let navigationController: UINavigationController
@@ -20,7 +20,7 @@ class MainCoordinator: Coordinator, CategoriesViewModelDelegate, GameViewModelCo
     func start() {
         let vc = CategoriesViewController.instantiate()
         let vm = CategoriesViewModel(categoriesDataSource: CategoriesDataSource())
-        vm.delegate = self
+        vm.coordinatorDelegate = self
         vc.viewModel = vm
         navigationController.viewControllers = [vc]
     }

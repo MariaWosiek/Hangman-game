@@ -7,22 +7,34 @@
 
 import Foundation
 
+
 protocol CategoriesDataSourceProtocol {
-    func fetchCategories() -> [Category]
+    func fetchCategories(completion: @escaping ([Category]) -> Void)
 }
 
 class CategoriesDataSource: CategoriesDataSourceProtocol {
-        
-    func fetchCategories() -> [Category] {
-        guard let url = Bundle.main.url(forResource: "LocalCategories", withExtension: "json") else { return [] }
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let jsonData = try decoder.decode([Category].self, from: data)
-            return jsonData
-        } catch {
-            print("error: \(error)")
+
+    func fetchCategories(completion: @escaping ([Category]) -> Void) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let url = Bundle.main.url(forResource: "LocalCategories", withExtension: "json") else {
+                DispatchQueue.main.async {
+                    completion([])
+                }
+                return
+            }
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode([Category].self, from: data)
+                DispatchQueue.main.async {
+                    completion(jsonData)
+                }
+            } catch {
+                print("error: \(error)")
+                DispatchQueue.main.async {
+                    completion([])
+                }
+            }
         }
-        return []
     }
 }

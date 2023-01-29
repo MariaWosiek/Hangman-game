@@ -7,15 +7,20 @@
 
 import Foundation
 
-protocol CategoriesViewModelDelegate: AnyObject {
+protocol CategoriesViewModelCoordinatorDelegate: AnyObject {
     func startGame(withCategory category: Category)
 }
 
+protocol CategoriesViewModelControllerDelegate: AnyObject {
+    func reloadData()
+}
+
 class CategoriesViewModel {
-    
-    weak var delegate: CategoriesViewModelDelegate?
-    private(set) var categories:[Category] = []
-    
+    private(set) var categories: [Category] = []
+
+    weak var coordinatorDelegate: CategoriesViewModelCoordinatorDelegate?
+    weak var controllerDelegate :CategoriesViewModelControllerDelegate?
+        
     private let categoriesDataSource: CategoriesDataSourceProtocol
     
     init(categoriesDataSource: CategoriesDataSourceProtocol) {
@@ -24,10 +29,13 @@ class CategoriesViewModel {
     }
     
     private func loadData() {
-        categories = categoriesDataSource.fetchCategories()
+        categoriesDataSource.fetchCategories(completion: { [weak self] in
+            self?.categories = $0
+            self?.controllerDelegate?.reloadData()
+        })
     }
     
     func categoryTapped(choosenCategory: Category) {
-        delegate?.startGame(withCategory: choosenCategory)
+        coordinatorDelegate?.startGame(withCategory: choosenCategory)
     }
 }
