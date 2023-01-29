@@ -31,6 +31,7 @@ class GameViewController: UIViewController, Storyboarded {
         passwordLabel.textColor = Constants.Colors.primaryColor
         hangmanImageView.tintColor = Constants.Colors.primaryColor
         scoreLabel.textColor = Constants.Colors.primaryColor
+        navigationController?.navigationBar.tintColor = Constants.Colors.primaryColor
         setGradientBackground()
     }
     
