@@ -22,7 +22,7 @@ class GameViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         gameViewModel.controllerDelegate = self
         configureView()
-        updateUIModel()
+        updateScreen()
     }
 
     private func configureView() {
@@ -88,18 +88,12 @@ class GameViewController: UIViewController, Storyboarded {
         }
         sender.isEnabled = false
         gameViewModel.characterTapped(choosenCharacter: Character(letterSelected))
-        updateUIModel()
-    }
-
-    private func updateUIModel() {
-        passwordLabel.text = gameViewModel.passwordWord
-        hangmanImageView.image = gameViewModel.hangmanImage?.withRenderingMode(.alwaysTemplate)
-        scoreLabel.text = "Score: \(gameViewModel.score)"
     }
 }
 
 // MARK: - GameViewModelControllerDelegate
 extension GameViewController: GameViewModelControllerDelegate {
+
     func resetButtonsState() {
         for button in buttonsArray {
             button.isEnabled = true
@@ -108,5 +102,22 @@ extension GameViewController: GameViewModelControllerDelegate {
     
     func showToastMessage(message: String) {
         showToast(message: message)
+    }
+    func updateScreen() {
+        UIView.transition(
+            with: view,
+            duration: 0.2,
+            options: [
+                .transitionCrossDissolve,
+                .allowUserInteraction,
+            ],
+            animations: { [weak self] in
+                self?.passwordLabel.text = self?.gameViewModel.passwordWord
+                self?.hangmanImageView.image = self?.gameViewModel.hangmanImage?.withRenderingMode(.alwaysTemplate)
+                self?.scoreLabel.text = "Score: \(self?.gameViewModel.score ?? 0)"
+            }
+        )
+        
+        view.isUserInteractionEnabled = gameViewModel.butttonEnabled
     }
 }

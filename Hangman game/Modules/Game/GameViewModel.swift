@@ -11,6 +11,7 @@ import UIKit.UIImage
 protocol GameViewModelControllerDelegate: AnyObject {
     func resetButtonsState()
     func showToastMessage(message: String)
+    func updateScreen()
 }
 
 protocol GameViewModelCoordinatorDelegate: AnyObject {
@@ -21,6 +22,7 @@ class GameViewModel {
     private(set) var passwordWord: String = ""
     private(set) var hangmanImage: UIImage?
     private(set) var score: Int = 0
+    private(set) var butttonEnabled = true
     
     weak var coordinatorDelegate: GameViewModelCoordinatorDelegate?
     weak var controllerDelegate: GameViewModelControllerDelegate?
@@ -28,10 +30,15 @@ class GameViewModel {
     private var inncorectTapsCounter: Int = 0
     private var word: String = ""
     private var unusedWords = [String]()
+    private var timer: Timer?
 
     init(category: Category) {
         unusedWords = category.words
         loadNewWord()
+    }
+    
+    deinit {
+        timer?.invalidate()
     }
 
     func characterTapped(choosenCharacter: Character) {
@@ -46,18 +53,21 @@ class GameViewModel {
             controllerDelegate?.showToastMessage(message: "Congratulation, you have won 1 point")
             unusedWords.removeAll(where: { $0 == word })
             score += 1
-            loadNewWord()
+            startTimer()
         }
+        
         if inncorectTapsCounter == 10 {
             controllerDelegate?.showToastMessage(message: "Sorry, you have lost 1 point, try again.")
             score -= 1
             unusedWords.removeAll(where: { $0 == word })
-            loadNewWord()
+            startTimer()
         }
 
         if unusedWords.isEmpty {
             coordinatorDelegate?.gameOverAlert()
+            timer?.invalidate()
         }
+        controllerDelegate?.updateScreen()
     }
 
     private func loadNewWord() {
@@ -102,5 +112,14 @@ class GameViewModel {
             array[(index - newLinesCounter) * 2] = selectedLetter
         }
         passwordWord = String(array)
+    }
+    
+    private func startTimer() {
+        butttonEnabled = false
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { [weak self] _ in
+            self?.loadNewWord()
+            self?.butttonEnabled = true
+            self?.controllerDelegate?.updateScreen()
+        })
     }
 }
