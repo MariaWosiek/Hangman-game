@@ -114,7 +114,11 @@ extension GameViewController: GameViewModelControllerDelegate {
             animations: { [weak self] in
                 self?.passwordLabel.text = self?.gameViewModel.passwordWord
                 self?.hangmanImageView.image = self?.gameViewModel.hangmanImage?.withRenderingMode(.alwaysTemplate)
-                self?.scoreLabel.text = "Score: \(self?.gameViewModel.score ?? 0)"
+                
+                let score = self?.gameViewModel.score ?? 0
+                let formattedString = String(format: Constants.Strings.gameScore.localized, score)
+                
+                self?.scoreLabel.text = formattedString
             }
         )
         

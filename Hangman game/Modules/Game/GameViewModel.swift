@@ -50,14 +50,14 @@ class GameViewModel {
         }
 
         if !passwordWord.contains(Character("_")) {
-            controllerDelegate?.showToastMessage(message: "Congratulation, you have won 1 point")
+            controllerDelegate?.showToastMessage(message: Constants.Strings.gameAddPointMessage.localized)
             unusedWords.removeAll(where: { $0 == word })
             score += 1
             startTimer()
         }
         
         if inncorectTapsCounter == 10 {
-            controllerDelegate?.showToastMessage(message: "Sorry, you have lost 1 point, try again.")
+            controllerDelegate?.showToastMessage(message: Constants.Strings.gameMinusPointMessage.localized)
             score -= 1
             unusedWords.removeAll(where: { $0 == word })
             startTimer()

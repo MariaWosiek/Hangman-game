@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Hangman game
+
+  Created by Maria Wosiek on 30/01/2023.
+  
+*/
+
+"game_over" = "Game over";
+"game_finish_alert_message" = "You have completed all passwords in this category, please choose another.";
+"ok" = "OK";
+"game_add_point_message" = "Congratulation, you have won 1 point";
+"game_minus_point_message" = "Sorry, you have lost 1 point, try again.";
+"game_score" = "Score: %d";

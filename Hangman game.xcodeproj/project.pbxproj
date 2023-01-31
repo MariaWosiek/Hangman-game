@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9A38BDD29890DFC00FBB822 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9A38BDF29890DFC00FBB822 /* Localizable.strings */; };
+		F9A38BE329894DEB00FBB822 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE229894DEA00FBB822 /* String+Extensions.swift */; };
 		F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */; };
 		F9C0AA8C297AAEDF00475FA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA8B297AAEDF00475FA6 /* SceneDelegate.swift */; };
 		F9C0AA8E297AAEDF00475FA6 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA8D297AAEDF00475FA6 /* CategoriesViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F9A38BDE29890DFC00FBB822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F9A38BE229894DEA00FBB822 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F9C0AA86297AAEDF00475FA6 /* Hangman game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9C0AA8B297AAEDF00475FA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				F9C0AA9D297AC64C00475FA6 /* Models */,
 				F9EF439C2983F02A00AB21F2 /* Extensions */,
 				F9C0AAB5297DA54D00475FA6 /* Supporting Files */,
+				F9A38BDF29890DFC00FBB822 /* Localizable.strings */,
 			);
 			path = "Hangman game";
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			children = (
 				F9EF43A02983F05100AB21F2 /* Array+Extensions.swift */,
 				F9EF43A22983F06C00AB21F2 /* UIViewController+Extensions.swift */,
+				F9A38BE229894DEA00FBB822 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A38BDD29890DFC00FBB822 /* Localizable.strings in Resources */,
 				F9C0AA96297AAEE100475FA6 /* LaunchScreen.storyboard in Resources */,
 				F9C0AABE297DA93900475FA6 /* LocalCategories.json in Resources */,
 				F9C0AA93297AAEE100475FA6 /* Assets.xcassets in Resources */,
@@ -254,6 +261,7 @@
 				F9C0AAA5297AC6CD00475FA6 /* Coordinator.swift in Sources */,
 				F9C0AAA9297AC97D00475FA6 /* MainCoordinator.swift in Sources */,
 				F9C0AA8E297AAEDF00475FA6 /* CategoriesViewController.swift in Sources */,
+				F9A38BE329894DEB00FBB822 /* String+Extensions.swift in Sources */,
 				F9C0AAA7297AC85100475FA6 /* Storyboarded.swift in Sources */,
 				F9EF43A52983F18600AB21F2 /* Constants.swift in Sources */,
 				F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */,
@@ -271,6 +279,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F9A38BDF29890DFC00FBB822 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9A38BDE29890DFC00FBB822 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F9C0AA8F297AAEDF00475FA6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -355,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

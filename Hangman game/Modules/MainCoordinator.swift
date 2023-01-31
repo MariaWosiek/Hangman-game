@@ -33,8 +33,8 @@ class MainCoordinator: Coordinator, CategoriesViewModelCoordinatorDelegate, Game
         navigationController.pushViewController(vc, animated: true)
     }
     func gameOverAlert() {
-        let alert = UIAlertController(title: "Game over", message: "You have completed all passwords in this category, please choose another.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { [weak self] _ in
+        let alert = UIAlertController(title: Constants.Strings.gameOver.localized, message: Constants.Strings.gameFinishAlertMessage.localized, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.Strings.ok.localized, style: UIAlertAction.Style.default, handler: { [weak self] _ in
             self?.navigationController.popViewController(animated: true)
         }))
         navigationController.present(alert, animated: true)
