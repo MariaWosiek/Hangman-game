@@ -29,7 +29,7 @@ class GameViewModel {
 
     private var inncorectTapsCounter: Int = 0
     private var word: String = ""
-    private var unusedWords = [String]()
+    private var unusedWords: [String]
     private var timer: Timer?
 
     init(category: Category) {
