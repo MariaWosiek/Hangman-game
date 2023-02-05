@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CategoriesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var categoryImageView: UIImageView!
     @IBOutlet private weak var categoryLabel: UILabel!
-
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         decorateCell()
@@ -29,6 +30,6 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     func configure(withCategory category: Category) {
         categoryLabel.text = category.categoryName
-        categoryImageView.image = UIImage(named: category.categoryImage)
+        categoryImageView.kf.setImage(with: category.categoryImage.url)
     }
 }
