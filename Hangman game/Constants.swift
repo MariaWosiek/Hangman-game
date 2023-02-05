@@ -8,6 +8,10 @@
 import UIKit
 
 enum Constants {
+    enum API {
+        static let baseURL = URL(string: "https://api.mocklets.com/p68659/")!
+    }
+    
     enum Colors {
         static let primaryColor = UIColor(red: 179/255, green: 179/225, blue: 255/255, alpha: 1.0)
         static let secondaryColor = UIColor(red: 133.0/255.0, green: 133.0/255.0, blue: 173.0/255.0, alpha: 1.0)

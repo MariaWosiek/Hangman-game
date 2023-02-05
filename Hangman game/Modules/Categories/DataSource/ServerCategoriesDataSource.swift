@@ -7,34 +7,37 @@
 
 import Foundation
 
-
-protocol CategoriesDataSourceProtocol {
-    func fetchCategories(completion: @escaping ([Category]) -> Void)
-}
-
-class CategoriesDataSource: CategoriesDataSourceProtocol {
-
-    func fetchCategories(completion: @escaping ([Category]) -> Void) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            guard let url = Bundle.main.url(forResource: "LocalCategories", withExtension: "json") else {
+class ServerCategoriesDataSource: CategoriesDataSourceProtocol {
+    private let baseURL: URL
+    
+    init(baseURL: URL) {
+        self.baseURL = baseURL
+    }
+    
+    func fetchCategories(completion: @escaping ([Category]) -> ()) {
+        let url = baseURL.appendingPathComponent("categories")
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "")
                 DispatchQueue.main.async {
                     completion([])
                 }
                 return
             }
+
             do {
-                let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode([Category].self, from: data)
                 DispatchQueue.main.async {
                     completion(jsonData)
                 }
             } catch {
-                print("error: \(error)")
+                print(error.localizedDescription)
                 DispatchQueue.main.async {
                     completion([])
                 }
             }
         }
+        task.resume()
     }
 }

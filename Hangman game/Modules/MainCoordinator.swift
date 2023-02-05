@@ -19,7 +19,8 @@ class MainCoordinator: Coordinator, CategoriesViewModelCoordinatorDelegate, Game
     
     func start() {
         let vc = CategoriesViewController.instantiate()
-        let vm = CategoriesViewModel(categoriesDataSource: CategoriesDataSource())
+        let dataSource = ServerCategoriesDataSource(baseURL: Constants.API.baseURL)
+        let vm = CategoriesViewModel(categoriesDataSource: dataSource)
         vm.coordinatorDelegate = self
         vc.viewModel = vm
         navigationController.viewControllers = [vc]

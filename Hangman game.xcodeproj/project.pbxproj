@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F9A38BDD29890DFC00FBB822 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9A38BDF29890DFC00FBB822 /* Localizable.strings */; };
 		F9A38BE329894DEB00FBB822 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE229894DEA00FBB822 /* String+Extensions.swift */; };
+		F9A38BE7298D2F6E00FBB822 /* LocalCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE6298D2F6E00FBB822 /* LocalCategoriesDataSource.swift */; };
+		F9A38BE9298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE8298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift */; };
+		F9A38BEC298FC68800FBB822 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F9A38BEB298FC68800FBB822 /* Kingfisher */; };
 		F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */; };
 		F9C0AA8C297AAEDF00475FA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA8B297AAEDF00475FA6 /* SceneDelegate.swift */; };
 		F9C0AA8E297AAEDF00475FA6 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA8D297AAEDF00475FA6 /* CategoriesViewController.swift */; };
@@ -24,7 +27,7 @@
 		F9C0AABC297DA66900475FA6 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AABB297DA66900475FA6 /* CategoriesCollectionViewCell.swift */; };
 		F9C0AABE297DA93900475FA6 /* LocalCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = F9C0AABD297DA93900475FA6 /* LocalCategories.json */; };
 		F9C0AAC0297DB05C00475FA6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AABF297DB05C00475FA6 /* Category.swift */; };
-		F9C0AAC3297DB1DC00475FA6 /* CategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AAC2297DB1DC00475FA6 /* CategoriesDataSource.swift */; };
+		F9C0AAC3297DB1DC00475FA6 /* ServerCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AAC2297DB1DC00475FA6 /* ServerCategoriesDataSource.swift */; };
 		F9EF43A12983F05100AB21F2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EF43A02983F05100AB21F2 /* Array+Extensions.swift */; };
 		F9EF43A32983F06C00AB21F2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EF43A22983F06C00AB21F2 /* UIViewController+Extensions.swift */; };
 		F9EF43A52983F18600AB21F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EF43A42983F18600AB21F2 /* Constants.swift */; };
@@ -33,6 +36,8 @@
 /* Begin PBXFileReference section */
 		F9A38BDE29890DFC00FBB822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9A38BE229894DEA00FBB822 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		F9A38BE6298D2F6E00FBB822 /* LocalCategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalCategoriesDataSource.swift; path = ../../../../../../../../Downloads/LocalCategoriesDataSource.swift; sourceTree = "<group>"; };
+		F9A38BE8298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSourceProtocol.swift; sourceTree = "<group>"; };
 		F9C0AA86297AAEDF00475FA6 /* Hangman game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9C0AA8B297AAEDF00475FA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +55,7 @@
 		F9C0AABB297DA66900475FA6 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9C0AABD297DA93900475FA6 /* LocalCategories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocalCategories.json; sourceTree = "<group>"; };
 		F9C0AABF297DB05C00475FA6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		F9C0AAC2297DB1DC00475FA6 /* CategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSource.swift; sourceTree = "<group>"; };
+		F9C0AAC2297DB1DC00475FA6 /* ServerCategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCategoriesDataSource.swift; sourceTree = "<group>"; };
 		F9EF43A02983F05100AB21F2 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		F9EF43A22983F06C00AB21F2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		F9EF43A42983F18600AB21F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A38BEC298FC68800FBB822 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +175,9 @@
 		F9C0AAC1297DB1BC00475FA6 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				F9C0AAC2297DB1DC00475FA6 /* CategoriesDataSource.swift */,
+				F9C0AAC2297DB1DC00475FA6 /* ServerCategoriesDataSource.swift */,
+				F9A38BE6298D2F6E00FBB822 /* LocalCategoriesDataSource.swift */,
+				F9A38BE8298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -200,6 +208,9 @@
 			dependencies = (
 			);
 			name = "Hangman game";
+			packageProductDependencies = (
+				F9A38BEB298FC68800FBB822 /* Kingfisher */,
+			);
 			productName = "Hangman game";
 			productReference = F9C0AA86297AAEDF00475FA6 /* Hangman game.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +239,9 @@
 				Base,
 			);
 			mainGroup = F9C0AA7D297AAEDF00475FA6;
+			packageReferences = (
+				F9A38BEA298FC68800FBB822 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F9C0AA87297AAEDF00475FA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,18 +273,20 @@
 			files = (
 				F9C0AAAD297AD2C000475FA6 /* GameViewController.swift in Sources */,
 				F9C0AAA5297AC6CD00475FA6 /* Coordinator.swift in Sources */,
+				F9A38BE9298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift in Sources */,
 				F9C0AAA9297AC97D00475FA6 /* MainCoordinator.swift in Sources */,
 				F9C0AA8E297AAEDF00475FA6 /* CategoriesViewController.swift in Sources */,
 				F9A38BE329894DEB00FBB822 /* String+Extensions.swift in Sources */,
 				F9C0AAA7297AC85100475FA6 /* Storyboarded.swift in Sources */,
 				F9EF43A52983F18600AB21F2 /* Constants.swift in Sources */,
+				F9A38BE7298D2F6E00FBB822 /* LocalCategoriesDataSource.swift in Sources */,
 				F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */,
 				F9C0AAB7297DA56D00475FA6 /* CategoriesViewModel.swift in Sources */,
 				F9C0AABC297DA66900475FA6 /* CategoriesCollectionViewCell.swift in Sources */,
 				F9C0AAB9297DA63000475FA6 /* GameViewModel.swift in Sources */,
 				F9C0AA8C297AAEDF00475FA6 /* SceneDelegate.swift in Sources */,
 				F9EF43A32983F06C00AB21F2 /* UIViewController+Extensions.swift in Sources */,
-				F9C0AAC3297DB1DC00475FA6 /* CategoriesDataSource.swift in Sources */,
+				F9C0AAC3297DB1DC00475FA6 /* ServerCategoriesDataSource.swift in Sources */,
 				F9EF43A12983F05100AB21F2 /* Array+Extensions.swift in Sources */,
 				F9C0AAC0297DB05C00475FA6 /* Category.swift in Sources */,
 			);
@@ -498,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9A38BEA298FC68800FBB822 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9A38BEB298FC68800FBB822 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9A38BEA298FC68800FBB822 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9C0AA7E297AAEDF00475FA6 /* Project object */;
 }
