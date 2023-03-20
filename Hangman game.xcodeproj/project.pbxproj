@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F94D229D29C8B54A0040A39C /* LocalCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94D229C29C8B54A0040A39C /* LocalCategoriesDataSource.swift */; };
 		F9A38BDD29890DFC00FBB822 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9A38BDF29890DFC00FBB822 /* Localizable.strings */; };
 		F9A38BE329894DEB00FBB822 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE229894DEA00FBB822 /* String+Extensions.swift */; };
-		F9A38BE7298D2F6E00FBB822 /* LocalCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE6298D2F6E00FBB822 /* LocalCategoriesDataSource.swift */; };
 		F9A38BE9298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A38BE8298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift */; };
 		F9A38BEC298FC68800FBB822 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F9A38BEB298FC68800FBB822 /* Kingfisher */; };
 		F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */; };
@@ -34,9 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F94D229C29C8B54A0040A39C /* LocalCategoriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCategoriesDataSource.swift; sourceTree = "<group>"; };
 		F9A38BDE29890DFC00FBB822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9A38BE229894DEA00FBB822 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		F9A38BE6298D2F6E00FBB822 /* LocalCategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalCategoriesDataSource.swift; path = ../../../../../../../../Downloads/LocalCategoriesDataSource.swift; sourceTree = "<group>"; };
 		F9A38BE8298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataSourceProtocol.swift; sourceTree = "<group>"; };
 		F9C0AA86297AAEDF00475FA6 /* Hangman game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hangman game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C0AA89297AAEDF00475FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F9C0AAC2297DB1DC00475FA6 /* ServerCategoriesDataSource.swift */,
-				F9A38BE6298D2F6E00FBB822 /* LocalCategoriesDataSource.swift */,
+				F94D229C29C8B54A0040A39C /* LocalCategoriesDataSource.swift */,
 				F9A38BE8298D2FB500FBB822 /* CategoriesDataSourceProtocol.swift */,
 			);
 			path = DataSource;
@@ -279,7 +279,7 @@
 				F9A38BE329894DEB00FBB822 /* String+Extensions.swift in Sources */,
 				F9C0AAA7297AC85100475FA6 /* Storyboarded.swift in Sources */,
 				F9EF43A52983F18600AB21F2 /* Constants.swift in Sources */,
-				F9A38BE7298D2F6E00FBB822 /* LocalCategoriesDataSource.swift in Sources */,
+				F94D229D29C8B54A0040A39C /* LocalCategoriesDataSource.swift in Sources */,
 				F9C0AA8A297AAEDF00475FA6 /* AppDelegate.swift in Sources */,
 				F9C0AAB7297DA56D00475FA6 /* CategoriesViewModel.swift in Sources */,
 				F9C0AABC297DA66900475FA6 /* CategoriesCollectionViewCell.swift in Sources */,
